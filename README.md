@@ -29,3 +29,16 @@ and the Look and Feel of API pages is modeled on twitter REST API.
 
 
 
+Changelog
+=======
+* Changed structure for yaml files - all (with index) goes to docs folder
+* Moved settings.ini to settings.php with regular array
+* Fixed yaml description format - for multiline text
+* Add more options for index.yaml file (version, response_format, api_url, description)
+* index.yaml can contain `<pre>` fields which will be properly displayed on the index page
+* Make index.php the root view file (DRY), split view details into `index_view.php` and `detail_view.php`
+* Add sticky footer
+* Add docs revision information (first 7 .git revision number chars)
+* Small view changes, badgets, codes, tables
+* Navigation changes
+* Code reformatting

@@ -7,7 +7,7 @@ authentication: None
 method: GET
 resource: account/{accountId} 
 resource_url: http://localhost:8080/sensordb/v1/account/{accountId}
-description: > 
+description: |
     API to fetch account details on a given accountId 
 parameters:
     - name : None 

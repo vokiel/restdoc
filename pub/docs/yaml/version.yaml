@@ -1,0 +1,35 @@
+
+---
+version: v1.0
+rate_limited: Yes
+response_format: JSON
+authentication: None
+method: GET
+resource: version
+resource_url: http://api.example.com/version
+description: |
+  This resource returns current API version which should be used for generating new requests.
+  Almost every further request should start with given version.
+
+parameters:
+  - name : None
+    description: |
+
+sample_url: http://api.example.com/version
+sample_response: |
+
+  {
+    "error": false
+    "msg": "v1.0",
+    "status": 200,
+  }
+
+sample_error: |
+
+  {
+    "error": true,
+    "msg": "Not Found. The requested URL '/404' was not found.",
+    "status": 404
+  }
+
+

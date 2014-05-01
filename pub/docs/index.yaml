@@ -1,0 +1,60 @@
+# file_name : relative path is w.r.t. pub directory
+# absolute file path : make sure web server can read the file
+#
+---
+version: v1.0
+response_format: JSON
+api_url: http://api.example.com/
+description: |
+  By default response contains 3 fields
+
+  <pre>{
+    "error" : boolean,
+    "msg" : string,
+    "status" : integer
+  }
+  </pre>
+  Response can contain more fields if the request was asking for some data. Then those data is returned in <code>_data</code> field:
+
+  <pre>{
+      "error" : false,
+      "msg" : "Avaliable objects list",
+      "status" : 200,
+      "_data" : [
+        {
+          "name" : "Test 1234",
+          "status" : "closed",
+        },
+        [...]
+      ]
+    }
+    </pre>
+
+apis :
+  api1 :
+    name : "version"
+    method: GET
+    description : >
+        For getting current API version number.
+    file_name : "docs/yaml/version.yaml"
+
+  api2 :
+      name : "account/add"
+      method: POST
+      description : >
+          API to provision a new account in system.
+      file_name : "docs/yaml/account-add.yaml"
+
+  api3 :
+      name : "account/{accountId}"
+      method: GET
+      description : >
+          API to fetch details of an account on supplied accountId
+      file_name : "docs/yaml/account-id.yaml"
+
+  api4 :
+      name : "sample"
+      method: GET
+      description : >
+         Sample YAML file to describe a rest API
+      file_name : "docs/yaml/sample.yaml"

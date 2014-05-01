@@ -7,7 +7,7 @@ authentication: None
 method: POST
 resource: account/add
 resource_url: http://localhost:8080/sensordb/v1/account/add
-description: > 
+description: |
     API to provision a new account for sensorDB application.
 parameters:
     - name : Name

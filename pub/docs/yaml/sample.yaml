@@ -7,7 +7,7 @@ authentication: None
 method: GET
 resource: device/list
 resource_url: http://localhost:8080/sensordb/v1/device/list
-description: > 
+description: |
     This is a cool API
     This is a cool API
     This is a cool API
